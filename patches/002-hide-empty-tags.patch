@@ -1,5 +1,5 @@
 diff --git a/src/bar.cpp b/src/bar.cpp
-index fab5a8f..0437797 100644
+index fab5a8f..8de8723 100644
 --- a/src/bar.cpp
 +++ b/src/bar.cpp
 @@ -241,11 +241,14 @@ void Bar::render()
@@ -8,7 +8,7 @@ index fab5a8f..0437797 100644
  	for (auto &tag : _tags) {
 +		auto indicators = std::min(tag.numClients, static_cast<int>(_bufs->height/2));
 +	  if (indicators == 0 && !(tag.state & TagState::Active)) {
-+		  break;
++		  continue;
 +		}
  		setColorScheme(
  			tag.state & TagState::Active ? colorActive : colorInactive,
