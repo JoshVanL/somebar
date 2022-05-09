@@ -1,0 +1,12 @@
+diff --git a/src/bar.cpp b/src/bar.cpp
+index fab5a8f..7cd4593 100644
+--- a/src/bar.cpp
++++ b/src/bar.cpp
+@@ -266,6 +266,7 @@ void Bar::renderStatus()
+ 	cairo_fill(_painter);
+ 
+ 	_x = start;
++	setColorScheme(colorInactive, false);
+ 	renderComponent(_statusCmp);
+ }
+ 
